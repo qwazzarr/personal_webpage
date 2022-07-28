@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "compass-mixins": "^0.12.12",
     "express": "^4.17.2"
   },
   "devDependencies": {
