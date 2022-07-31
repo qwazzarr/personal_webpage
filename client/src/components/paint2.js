@@ -2,6 +2,7 @@ import React from "react";
 import {useState} from "react";
 import "../css/pulseButton.css";
 import "../css/projects.css";
+import "../css/activeButton.css";
 import Canvas from "./canvas";
 import ReactSlider from "react-slider";
 

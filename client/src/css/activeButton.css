@@ -1,0 +1,17 @@
+.save { 
+    font-size: 1.9em;
+    margin-top: 7%;
+    cursor: pointer;
+    align-self: center;
+    border-radius: 35px;
+    text-align: center;
+    background: #AACFFC;
+    width: 20%;
+    margin-right: 10%;
+    transition: all 0.2s ease;
+}
+
+.save:hover {
+    transform: scale(0.9);
+    background-color: #1477F0;
+}
