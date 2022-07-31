@@ -1,0 +1,229 @@
+
+.interactivediv {
+    display: inline-block;
+
+    position: relative;
+
+    vertical-align: bottom;
+}
+.interactiveon {
+    text-decoration: none;
+    color: #1477F0;
+    background: rgba(170, 207, 252, 0.88);
+    z-index: 15;
+}
+.interactiveoff {
+    text-decoration: none;
+    color: black;
+    background: linear-gradient(360deg, #AACFFC 12.96%, rgba(170, 207, 252, 0) 36.6%);
+    border-radius: 10px; 
+    z-index: 15;
+}
+
+.animbox {
+    position: absolute;
+    display: none;
+    z-index: 10;
+    margin-top: 50px;
+    
+}
+.contenton{
+    display: flex
+}
+
+
+div[class^="stripe"] {
+    position: absolute;
+    background: none;   
+    width: 15px;
+    height: 5px;
+    border-radius: 15px;
+    transform-origin: top;
+    z-index: 10;
+}
+
+div[class^="dot"] {
+    position: absolute;
+    background: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform-origin: top;
+    z-index: 10;
+}
+
+.interactivediv:hover .contenton {
+    bottom: 220%;
+    position: relative;
+    width: max-content;
+    padding: 0.5%;
+    background: #C1DDFF;
+    border: 3px solid #1477F0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+}
+
+.interactivediv:hover .animbox{
+    display: block;
+}
+
+#UnipaysY {
+    width: 465.8px;
+    height: 51.8px;
+}
+
+#MessengerY {
+    width: 470.5px;
+    height: 51.8px;
+}
+
+#PokemonY {
+    width: 500.2px;
+    height: 51.8px;
+}
+
+#JunctionY {
+    width: 563.2px;
+    height: 51.8px;
+}
+
+#mapY {
+    width: 248.2px;
+    height: 51.8px;
+}
+
+#UniversityY {
+    width: 341px;
+    height:31.50px;
+}
+
+#ReactJsY{
+    width: 425.2px;
+    height: 37px;
+}
+
+#NodeJsY {
+    width: 487.92px;
+    height: 37px;
+}
+
+.interactivediv:hover .stripe1 {
+
+    animation: batshit  1.3s cubic-bezier(.94,.32,.24,1.49);
+}
+
+.interactivediv:hover .dot2 {
+
+    animation: batshit2  1.3s cubic-bezier(.94,.32,.24,1.49);
+}  
+
+.interactivediv:hover .dot3 {
+
+    animation: batshit2  1.3s cubic-bezier(.94,.32,.24,1.49);
+} 
+
+.interactivediv:hover .stripe4 {
+    animation: batshit3 1.3s cubic-bezier(.94,.32,.24,1.49);
+}
+.stripe1{
+    overflow:hidden;
+    transition: transform 1s cubic-bezier(.94,.32,.24,1.49),
+                padding 1s cubic-bezier(.94,.32,.24,1.49);
+    bottom: 245%;
+    right: 100%;
+
+    transform: rotate(-45deg);
+
+} 
+.dot2{
+    overflow:hidden;
+    bottom: 370%;
+    left: 30%;
+    transition: transform 1s cubic-bezier(.94,.32,.24,1.49),
+                padding 1s cubic-bezier(.94,.32,.24,1.49);
+}
+
+.dot3 {
+    overflow:hidden;
+    bottom: 370%;
+    left: 70%;
+    transition: transform 1s cubic-bezier(.94,.32,.24,1.49),
+                padding 1s cubic-bezier(.94,.32,.24,1.49);
+
+}
+.stripe4 {
+    overflow: hidden;
+    transition: transform 1s cubic-bezier(.94,.32,.24,1.49),
+                padding 1s cubic-bezier(.94,.32,.24,1.49);
+    bottom: 245%;
+    right: 0%;
+    transform: rotate(45deg);
+    }
+
+@keyframes batshit3 {
+    50% {
+        padding: 0 0 17.5px 0;
+        transform: rotate(45deg) translate(13px,-50px);
+        background: rgb(193, 221, 255);
+    }   
+    100% {
+        padding: 0 0 0 0;
+        transform: rotate(45deg) translate(0,0);
+        background:none;
+    }
+}
+@keyframes batshit2 {
+    50% {
+        background: rgb(193, 221, 255);
+    }
+
+    100% {
+        background: none;
+    }
+}
+
+@keyframes batshit {
+    50% {
+        padding: 0 0 17.5px 0;
+        transform: rotate(-45deg) translate(-10px,-45px);
+        background: rgb(193, 221, 255);
+    }
+
+    100% {
+        padding: 0 0 0 0;
+        transform: rotate(-45deg) translate(0,0);
+        background: none;
+    }
+}
+
+
+.stripe5{
+top: 100%;
+left: 50%;
+transform: translate(-50%,0);
+}
+
+.stripe6{
+right: 10%;
+top: 90%;
+transform: rotate(-45deg);
+}
+
+.stripe7{
+top: 50%;
+right: 0;
+transform: rotate(-90deg);
+}
+
+.stripe8{
+top: 10%;
+right: 10%;
+transform: rotate(-135deg);
+}
+.contentoff{
+    visibility: hidden;
+    width: max-content;
+    position: relative;
+    z-index: 10;
+
+}
