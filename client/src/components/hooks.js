@@ -1,10 +1,14 @@
+import axios from 'axios';
 import { useRef,useEffect } from 'react';
+import canvas from './canvas';
 
-export function useOnDraw(onDraw,color,thickness) {
+export function useOnDraw(onDraw,color,thickness,toRender) {
 
     const canvasRef = useRef(null);
-
+    
     const isDrawingRef = useRef(false);
+
+    const hasDrawn = useRef(false);
 
     const mouseMoveListenerRef = useRef(null);
     const mouseDownListenerRef = useRef(null);
@@ -32,6 +36,24 @@ export function useOnDraw(onDraw,color,thickness) {
         window.removeEventListener("mousedown",mouseDownListenerRef.current);
 
     },[color,thickness]);
+
+    useEffect(() => {
+      if(!hasDrawn.current) {  
+        return;
+      }
+      hasDrawn.current = false;
+      console.log("cleaning up");
+
+      const dataURL = {dataUrl: canvasRef.current.toDataURL()};
+      
+      //Change with prod
+
+      const headers = {"Access-Control-Allow-Origin":"*"};
+      axios.post('http://localhost:5050/draw',dataURL,{headers})
+        .then(response => console.log(response));
+      const ctx = canvasRef.current.getContext('2d');   
+      ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+    }, [toRender])
     
     
     function setCanvasRef(ref) {
@@ -52,8 +74,10 @@ export function useOnDraw(onDraw,color,thickness) {
             if(isDrawingRef.current) {
                 const point = computePointInCanvas(e.clientX,e.clientY);
                 const ctx = canvasRef.current.getContext('2d');
+
                 if(onDraw) {
                     console.log("drawing: "+color);
+                    hasDrawn.current = true;
                     onDraw(ctx,point,prevPointRef.current,color,thickness);
                 }
                 prevPointRef.current = point;
@@ -88,8 +112,7 @@ export function useOnDraw(onDraw,color,thickness) {
 
         if(canvasRef.current){
             const boundingRect = canvasRef.current.getBoundingClientRect();
-            
-
+            //Change according to offsetHeight
             return {
                 x : clientX - boundingRect.left ,
                 y : clientY - boundingRect.top

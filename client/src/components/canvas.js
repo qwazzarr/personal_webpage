@@ -1,22 +1,31 @@
 
 import React from 'react';
-import { useRef,useEffect } from 'react';
+import { useRef,useEffect,useImperativeHandle,forwardRef,useState} from 'react';
 import { useOnDraw } from './hooks';
 import "../css/canvas.css";
-const Canvas = ({color,thickness}) => {
+const Canvas = ({color,thickness},ref) => {
 
-    const setCanvasRef = useOnDraw(onDraw,color,thickness);
+    const [toRender,setToRender] = useState(0);
+    const setCanvasRef = useOnDraw(onDraw,color,thickness,toRender);
 
+    useImperativeHandle(ref, () => ({
+        clear: clear
+      }));
     const width = window.innerWidth * 0.9 * 0.55;
     const height = window.innerHeight *0.9 * 0.63;
 
-    // const width = "400px";
-    // const height = "300px";
+    // const width = "923.67px";
+    // const height = "591.381px";  
+
+    function clear(){
+        setToRender(toRender+1);
+    }
     
     function onDraw(ctx,point,prevPoint,color,thickness) {
         drawLine(prevPoint, point , ctx, color,thickness);
     }
 
+    
     function drawLine(start,end,ctx,color,width) {
         start = start ?? end;
         ctx.beginPath();
@@ -25,8 +34,6 @@ const Canvas = ({color,thickness}) => {
         ctx.moveTo(start.x,start.y);
         ctx.lineTo(end.x,end.y);
         ctx.stroke();
-
-
         ctx.fillStyle = color;
 
         ctx.beginPath();
@@ -43,4 +50,4 @@ const Canvas = ({color,thickness}) => {
     )
 }
 
-export default Canvas;  
+export default forwardRef(Canvas)   ;  

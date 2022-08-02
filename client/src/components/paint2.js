@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from "react";
+import {useState,useRef} from "react";
 import "../css/pulseButton.css";
 import "../css/projects.css";
 import "../css/activeButton.css";
@@ -11,8 +11,9 @@ const Paint2 = () => {
 
     const [isClicked, setIsClicked] = useState(false);
 
-
     const [color, setColor] = useState("#ffffff");
+
+    const canvasRef = useRef(null);
 
     const [thickness,setThickness] = useState("5");
 
@@ -26,7 +27,7 @@ const Paint2 = () => {
                     <button class={isClicked ? "pulse-clicked":"pulse-button"} onClick = {handleClick}>Let's draw!</button>
                 </div>
                 <div className={isClicked ? "outerCanvas":"outerCanvasOff"}>
-                    <Canvas color={color} thickness={thickness}></Canvas>
+                    <Canvas ref={canvasRef} color={color} thickness={thickness}></Canvas>
                     <div class = 'slidD'>
                         <button class = "white" onClick={() => {
                             setColor("#ffffff");
@@ -43,7 +44,7 @@ const Paint2 = () => {
                     </div>
                     
                 </div>
-                <div className={isClicked ?"save":"outerCanvasOff"}>Draw this!</div>
+                <div className={isClicked ?"save":"outerCanvasOff"} onClick = {()=> {canvasRef.current.clear()}}>Draw this!</div>
             </div>
 }
 
