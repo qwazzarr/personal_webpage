@@ -3,6 +3,7 @@ import React from "react";
 import ProjectsItem from "./projectsItem";
 
 import "../css/projects.css"
+import MovingGallery from "./movingGallery";
 
 const ProjectsList = () => {
 
