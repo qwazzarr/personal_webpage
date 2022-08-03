@@ -76,12 +76,10 @@ export function useOnDraw(onDraw,color,thickness,toRender) {
                 const ctx = canvasRef.current.getContext('2d');
 
                 if(onDraw) {
-                    console.log("drawing: "+color);
                     hasDrawn.current = true;
                     onDraw(ctx,point,prevPointRef.current,color,thickness);
                 }
                 prevPointRef.current = point;
-                console.log(point);
             }
         }
         if(mouseMoveListenerRef.current) {

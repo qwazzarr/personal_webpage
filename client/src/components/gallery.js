@@ -7,20 +7,21 @@ import axios from "axios";
 
 const Gallery = () => {
 
-
+    const [drawings, setdrawings] = useState([]);
+    console.log("Gallery rendered, drawings length:"+drawings.length);
     const checkDrawings = async() => {
         axios.get("http://localhost:5050/drawings")
             .then(response => {
-                console.log("Received data:"+response.data.dataDrawings);
 
-                const data = response.data.dataDrawings;
-                
+                const data = JSON.parse(response.data.dataDrawings);
                 if(drawings == undefined) {
+                    console.log("Set because undefined");
                     setdrawings(data);
                 }
                 else {
                     if(drawings.length != data.length) {
-                        setdrawings(data)
+                        console.log("Set because other length");
+                        setdrawings(data);
                     }
                     else {
 
@@ -34,20 +35,15 @@ const Gallery = () => {
                                 }
                             }
                             if(!flag) {
+                                console.log("Set because new elements");
                                 setdrawings(data);
                                 break;
                             }
                         }
                     }
                 }
-            
-
-
-                return response.data.dataDrawings;
             })
     };
-    const [drawings, setdrawings] = useState([]);
-
     useEffect(() => {
         const interval = setInterval(() => {   
             checkDrawings()
@@ -55,8 +51,9 @@ const Gallery = () => {
     
       return () => {
         clearInterval(interval)
+        console.log("Gallery unmounted");
       }
-    }, []);
+    }, [drawings]);
     
     return (
         <div className = "gallery">

@@ -29,8 +29,8 @@ const Paint2 = () => {
                 <div className={isClicked ? "outerCanvas":"outerCanvasOff"}>
                     <Canvas ref={canvasRef} color={color} thickness={thickness}></Canvas>
                     <div class = 'slidD'>
-                        <button class = "white" onClick={() => {
-                            setColor("#ffffff");
+                        <button class = "blue" onClick={() => {
+                            setColor("#1477F0");
                         }}></button>
                         <button class = "black" onClick={ () => {   
                             setColor("#000000");

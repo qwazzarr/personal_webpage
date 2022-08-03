@@ -109,9 +109,9 @@
     margin-top: 10%;
     align-self: center;
 }
-.white {
+.blue {
     border-radius: 50%;
-    background-color: white;
+    background-color: #1477F0;
     height: 30px;
     width: 30px;
     
@@ -155,10 +155,6 @@
     margin-top: 50%;
 }
 
-
-.save { 
-
-}
 
 .artist {
     font-size: 1.9em;

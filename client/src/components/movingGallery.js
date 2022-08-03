@@ -7,38 +7,42 @@ import { useState } from 'react'
 
 const MovingGallery = ({startW,weight , friction , drawings}) => {
 
-
+   
   const [start,setStart] = useState(startW);
-  if(drawings == undefined) {
-    var item = "hui";
+
+  const [update, setupdate] = useState(false);
+
+
+  console.log("i am getting rerendered");
+  if(drawings == undefined||drawings.length ==0) {
+    var item = {value:"hui"};
   }
   else {
-    var item = drawings[Math.floor(Math.random()*drawings.length)]
+    var item = drawings[Math.floor(Math.random()*drawings.length)];
   }
-  
   const props = useSpring({
      loop :true,
      config: {mass:weight,clamp:true,friction:friction,tension:70},
      to: { 
             position:"absolute",
-            background: "#1477F0",
-            "background-image":"url("+item+")",
             width : "400px",
             height : "300px",
             left:"100%"}
            ,
      from: { 
         position:"absolute",
-        background: "white",
         width : "400px",
         height: "300px",
         left: start+"%"
         },
 
-    onRest : ()=>setStart("-20"),
-        })
+    onRest : ()=> {
+        item = drawings[Math.floor(Math.random()*drawings.length)];
+        setStart("-20");
+        setupdate( update => update +1 );
+        },})
   return (
-    <animated.div style={props}>I will fade in</animated.div>
+    <animated.img style={props} src= {item.value.replace(/(\r\n|\n|\r)/gm, "")}></animated.img>
     )
 }
 
