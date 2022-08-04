@@ -3,7 +3,7 @@ import React from 'react';
 import { useRef,useEffect,useImperativeHandle,forwardRef,useState} from 'react';
 import { useOnDraw } from './hooks';
 import "../css/canvas.css";
-const Canvas = ({color,thickness},ref) => {
+const Canvas = ({color,thickness, width, height},ref) => {
 
     const [toRender,setToRender] = useState(0);
     const setCanvasRef = useOnDraw(onDraw,color,thickness,toRender);
@@ -11,11 +11,38 @@ const Canvas = ({color,thickness},ref) => {
     useImperativeHandle(ref, () => ({
         clear: clear
       }));
-    const width = window.innerWidth * 0.9 * 0.55;
-    const height = window.innerHeight *0.9 * 0.63;
 
-    // const width = "923.67px";
-    // const height = "591.381px";  
+    console.log("Getting Rendered:"+width);
+    
+    // let width = null;
+    // let height = null;
+    // if(parent.current== null) {
+    //     width = window.innerWidth * 0.9 * 0.55;
+    //     height = window.innerHeight *0.9 * 0.63;
+    // }
+    // else {
+    //     const boundingRect =  parent.current.getBoundingClientRect();
+    //     width = boundingRect.width * 0.9;
+    //     height = boundingRect.height; 
+    //     console.log("GSIFOHGOSIFHGS");
+    // }
+    // let width = null;
+    // let height = null;
+    // const canvasdiv = document.getElementById("canvasdiv");
+    // if(canvasdiv == null) {
+    //     width = window.innerWidth * 0.9 * 0.55;
+    //     height = window.innerHeight *0.9 * 0.63;
+    // }
+    // else {
+    //     const boundingRect =  canvasdiv.getBoundingClientRect();
+    //     width = boundingRect.width * 0.9;
+    //     height = boundingRect.height; 
+    // }
+    
+    
+    //const height = document.getElemenstByClassName("outerCanvas")[0].getBoundingClientRect().height;
+    // const width = window.innerWidth * 0.9 * 0.55;
+    // const height = window.innerHeight *0.9 * 0.63;
 
     function clear(){
         setToRender(toRender+1);
@@ -45,7 +72,6 @@ const Canvas = ({color,thickness},ref) => {
             width={width}
             height={height}
             ref={setCanvasRef}
-            class ="canvas"
             />
     )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import {useState,useRef} from "react";
+import {useState,useRef ,useEffect} from "react";
 import "../css/pulseButton.css";
 import "../css/projects.css";
 import "../css/activeButton.css";
@@ -11,23 +11,35 @@ const Paint2 = () => {
 
     const [isClicked, setIsClicked] = useState(false);
 
-    const [color, setColor] = useState("#ffffff");
+    const [width, setWidth] = useState("400px");
+
+    const [height, setHeight] = useState("400px");
+
+    const canvasDivRef = useRef(null)
+    const [color, setColor] = useState("#000000");
 
     const canvasRef = useRef(null);
 
     const [thickness,setThickness] = useState("5");
 
+
     const handleClick = () => {
         setIsClicked(true);
     };
+
+    useEffect(() => {
+        setWidth(canvasDivRef.current.getBoundingClientRect().width * 0.9);
+        setHeight(canvasDivRef.current.getBoundingClientRect().height);
+    }, [isClicked])
+    
     
     return <div className="paint">
                 <div class = {isClicked ? "artist":"outerCanvasOff"}>For your inner artist</div>
                 <div class={isClicked ? "pulse-clicked":'container'} id ="pnt">
                     <button class={isClicked ? "pulse-clicked":"pulse-button"} onClick = {handleClick}>Let's draw!</button>
                 </div>
-                <div className={isClicked ? "outerCanvas":"outerCanvasOff"}>
-                    <Canvas ref={canvasRef} color={color} thickness={thickness}></Canvas>
+                <div className={isClicked ? "outerCanvas":"outerCanvasOff"} id = "canvasdiv" ref = {canvasDivRef} >
+                    <Canvas ref={canvasRef} color={color} thickness={thickness} width = {width} height = {height}></Canvas>
                     <div class = 'slidD'>
                         <button class = "blue" onClick={() => {
                             setColor("#1477F0");
@@ -39,7 +51,7 @@ const Paint2 = () => {
                         onAfterChange={ (a,b) => {
                             setThickness(a);
                             console.log("thickness: "+a);
-                        }}/>
+                        }}/>    
                         <div className="thickImg"><img src={require("../assets/thickness.png")}></img></div>
                     </div>
                     
