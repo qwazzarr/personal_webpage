@@ -15,31 +15,11 @@ const Gallery = () => {
 
                 const data = JSON.parse(response.data.dataDrawings);
                 if(drawings == undefined) {
-                    console.log("Set because undefined");
                     setdrawings(data);
                 }
                 else {
                     if(drawings.length != data.length) {
-                        console.log("Set because other length");
                         setdrawings(data);
-                    }
-                    else {
-
-                        for(var i = 0;i<data.length;i++) {
-                            var element = data[i];
-                            var flag = false;
-                            for(var j = 0;j<drawings.length;j++) {
-                                var element2 = drawings[j];
-                                if(element2.value == element.value) {
-                                    flag = true;
-                                }
-                            }
-                            if(!flag) {
-                                console.log("Set because new elements");
-                                setdrawings(data);
-                                break;
-                            }
-                        }
                     }
                 }
             })
@@ -48,10 +28,8 @@ const Gallery = () => {
         const interval = setInterval(() => {   
             checkDrawings()
         }, 1000);
-    
       return () => {
         clearInterval(interval)
-        console.log("Gallery unmounted");
       }
     }, [drawings]);
     

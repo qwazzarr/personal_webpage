@@ -13,7 +13,6 @@ const MovingGallery = ({startW,weight , friction , drawings}) => {
   const [update, setupdate] = useState(false);
 
 
-  console.log("i am getting rerendered");
   if(drawings == undefined||drawings.length ==0) {
     var item = {value:"hui"};
   }
