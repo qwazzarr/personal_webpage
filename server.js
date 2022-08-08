@@ -35,6 +35,7 @@ app.post('/draw',(req,res) => {
 
 app.get('/drawings',(req,res) => {
     const data = DATABASE;
+    res.header("Access-Control-Allow-Origin", "*");
 
     if(data.length === 0) {
         data.push({value:DUMMY_PICTURE});
