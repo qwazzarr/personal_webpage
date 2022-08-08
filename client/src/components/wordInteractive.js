@@ -32,7 +32,7 @@ const WordInteractive = (props) => {
                 <div id = {text+"X"} class ={`content${active ? "on":"on"}`}>{content}</div>
                 
             </div>
-            <a href = {link} id = {text} class = {`interactive${active ? "on":"off"}`} onMouseEnter = {() => setActive(true)} onMouseLeave={() => setActive(false)}>{text}</a>
+            <a href = {link} id = {text} class = {`interactive${active ? "on":"off"}`} onMouseEnter = {() => setActive(true)} onMouseLeave={() => setActive(false)} target= {link=="" ? "_self":"_blank"}>{text}</a>
         </span>
     )
 }

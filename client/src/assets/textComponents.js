@@ -31,7 +31,8 @@ export default {
                     photo : "pokemon.png",
 
                     text : [
-                        <p><WordInteractive text = "Pokemon Chat" content = "Anonymous messengers are the future:" link = ""/> Anonymous messenging with people close to your geolocation.</p>,
+                        <p><WordInteractive text = "Pokemon Chat" content = "Anonymous messengers are the future:" link = ""/> Anonymous messenging with people close to your
+                         geolocation.</p>,
                         <p> Client : swiftUI , Backend: SpringBoot .</p>,
                         <p>*Under construction* </p>
                     ]

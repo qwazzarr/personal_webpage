@@ -27,6 +27,8 @@
     width: 265px;
 }
 
+
+
 .projectItem {
 
 
@@ -85,10 +87,23 @@
     display: none;
 }
 
-.paint {
-    display: flex;
-    flex-direction: column;
-    width:63%;
+
+@media all and (min-width:0px) and (max-width: 900px) {
+    .paint {
+        display: none;
+    }
+    .skills {
+        width: 100%;
+        align-self: center;
+    }
+  }
+
+@media all and (min-width:900px) {
+    .paint {
+        display: flex;
+        flex-direction: column;
+        width:63%;
+    }
 }
 
 .outerCanvas {
