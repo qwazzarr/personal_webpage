@@ -76,4 +76,4 @@ const Canvas = ({color,thickness, width, height},ref) => {
     )
 }
 
-export default forwardRef(Canvas)   ;  
+export default forwardRef(Canvas);  

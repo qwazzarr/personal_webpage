@@ -16,6 +16,7 @@ const ProjectsList = () => {
             <ProjectsItem type = "messenger"/>
             <ProjectsItem type = "pokemon"/>
             <ProjectsItem type = "junction"/>
+            <ProjectsItem type = "motionTailor"/>
         </div>
         </div>
     );  

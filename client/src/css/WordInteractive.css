@@ -73,15 +73,18 @@ div[class^="dot"] {
 }
 
 #MessengerY {
-    width: 470.5px;
+    width: 597.3px;
     height: 51.8px;
 }
 
 #PokemonY {
-    width: 500.2px;
+    width: 560.2px;
     height: 51.8px;
 }
-
+#MotionTailorY { 
+    width: 679.6px;
+    height: 51.8px;
+}
 #JunctionY {
     width: 563.2px;
     height: 51.8px;
@@ -95,6 +98,7 @@ div[class^="dot"] {
 #UniversityY {
     width: 341px;
     height:31.50px;
+    margin-top: 25px;
 }
 
 #ReactJsY{
@@ -110,6 +114,7 @@ div[class^="dot"] {
 .interactivediv:hover .stripe1 {
 
     animation: batshit  1.3s cubic-bezier(.94,.32,.24,1.49);
+    -webkit-animation: batshit  1.3s cubic-bezier(.94,.32,.24,1.49);
 }
 
 .interactivediv:hover .dot2 {
@@ -124,17 +129,52 @@ div[class^="dot"] {
 
 .interactivediv:hover .stripe4 {
     animation: batshit3 1.3s cubic-bezier(.94,.32,.24,1.49);
+    -webkit-animation: batshit3 1.3s cubic-bezier(.94,.32,.24,1.49);
 }
+
 .stripe1{
     overflow:hidden;
     transition: transform 1s cubic-bezier(.94,.32,.24,1.49),
                 padding 1s cubic-bezier(.94,.32,.24,1.49);
+
+    -webkit-transition: -webkit-transform 1s cubic-bezier(.94,.32,.24,1.49),
+                        padding 1s cubic-bezier(.94,.32,.24,1.49);
     bottom: 245%;
     right: 100%;
 
     transform: rotate(-45deg);
 
-} 
+}
+_::-webkit-full-page-media, _:future, :root .stripe1 {
+
+    overflow:hidden;
+    transition: transform 1s cubic-bezier(.94,.32,.24,1.49),
+                padding 1s cubic-bezier(.94,.32,.24,1.49);
+
+    -webkit-transition: -webkit-transform 1s cubic-bezier(.94,.32,.24,1.49),
+                        padding 1s cubic-bezier(.94,.32,.24,1.49);
+    bottom: 285%;
+    right: 105%;
+
+    transform: rotate(-45deg);
+  
+}
+
+_::-webkit-full-page-media, _:future, :root .stripe4 {
+
+    overflow: hidden;
+    transition: transform 1s cubic-bezier(.94,.32,.24,1.49),
+                padding 1s cubic-bezier(.94,.32,.24,1.49);
+
+    -webkit-transition: -webkit-transform 1s cubic-bezier(.94,.32,.24,1.49),
+            padding 1s cubic-bezier(.94,.32,.24,1.49);
+
+    bottom: 295%;
+    right: -10%;
+    transform: rotate(45deg);
+  
+ }
+
 .dot2{
     overflow:hidden;
     bottom: 370%;
@@ -155,6 +195,10 @@ div[class^="dot"] {
     overflow: hidden;
     transition: transform 1s cubic-bezier(.94,.32,.24,1.49),
                 padding 1s cubic-bezier(.94,.32,.24,1.49);
+
+    -webkit-transition: -webkit-transform 1s cubic-bezier(.94,.32,.24,1.49),
+            padding 1s cubic-bezier(.94,.32,.24,1.49);
+
     bottom: 245%;
     right: 0%;
     transform: rotate(45deg);
@@ -196,6 +240,33 @@ div[class^="dot"] {
     }
 }
 
+@-webkit-keyframes batshit {
+    50% {
+        
+        padding: 0 0 17.5px 0;
+        -webkit-transform: rotate(-45deg) translate(-10px,-45px);
+        background: rgb(193, 221, 255);
+    }
+
+    100% {
+        padding: 0 0 0 0;
+        -webkit-transform: rotate(-45deg) translate(0,0);
+        background: none;
+    }
+}
+
+@-webkit-keyframes batshit3 {
+    50% {
+        padding: 0 0 17.5px 0;
+        -webkit-transform: rotate(45deg) translate(13px,-50px);
+        background: rgb(193, 221, 255);
+    }   
+    100% {
+        padding: 0 0 0 0;
+        -webkit-transform: rotate(45deg) translate(0,0);
+        background:none;
+    }
+}
 
 .stripe5{
 top: 100%;

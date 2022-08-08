@@ -7,6 +7,7 @@ import DrawingPage from './components/drawingPage';
 import MovingGallery from './components/movingGallery';
 import Gallery from './components/gallery';
 import "./css/global.css";
+import GalleryPage from './components/galleryPage';
 function App() {
   return (
     <>
@@ -14,7 +15,7 @@ function App() {
     <Description/>
     <ProjectsList/>
     <DrawingPage/>
-    <Gallery/>
+    <GalleryPage/>
     </>
   );
 }
