@@ -2,6 +2,9 @@
   "name": "personal_webpage",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "14.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
@@ -9,7 +12,8 @@
     "client-install": "cd client && npm install",
     "server": "nodemon server.js",
     "client": "unset HOST && npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "proxy": "http://localhost:5000",
   "keywords": [],
