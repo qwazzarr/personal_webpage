@@ -18,11 +18,11 @@ SECRET = "artemiscool";
 
 //     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 //   }
-app.get('/', (req,res) => {
+app.get('/api', (req,res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.json( { message : "Hi pidor"})});
 
-app.post('/draw',(req,res) => {
+app.post('/api/draw',(req,res) => {
     //delete on prod?
     res.header("Access-Control-Allow-Origin", "*");
 
@@ -33,7 +33,7 @@ app.post('/draw',(req,res) => {
             contents : req.body});
 })
 
-app.get('/drawings',(req,res) => {
+app.get('/api/drawings',(req,res) => {
     const data = DATABASE;
     res.header("Access-Control-Allow-Origin", "*");
 
@@ -45,7 +45,7 @@ app.get('/drawings',(req,res) => {
 
     });
 
-app.get('/admin',(req,res) => {
+app.get('/api/admin',(req,res) => {
     const code = req.query.secret;
 
     if(code == SECRET) {
@@ -55,7 +55,5 @@ app.get('/admin',(req,res) => {
     }
     res.sendStatus(418);
 })
-
-
 
 app.listen(process.env.PORT||5000);
