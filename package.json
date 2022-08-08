@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client-install": "cd client && npm install",
     "server": "nodemon server.js",
-    "client": "unset HOST && npm start --prefix client",
+    "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "keywords": [],
