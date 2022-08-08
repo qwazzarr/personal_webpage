@@ -49,7 +49,7 @@ export function useOnDraw(onDraw,color,thickness,toRender) {
       //Change with prod
 
       const headers = {"Access-Control-Allow-Origin":"*"};
-      axios.post('http://localhost:5050/draw',dataURL,{headers})
+      axios.post('/api/draw',dataURL,{headers})
         .then(response => console.log(response));
       const ctx = canvasRef.current.getContext('2d');   
       ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
@@ -58,7 +58,6 @@ export function useOnDraw(onDraw,color,thickness,toRender) {
     
     function setCanvasRef(ref) {
         if(!ref) return;
-        console.log("addinglisteners?"+color);
         if(canvasRef.current) {
             canvasRef.current.removeEventListener("mousedown",mouseDownListenerRef.current);    
         }
