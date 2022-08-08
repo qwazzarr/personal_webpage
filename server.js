@@ -13,16 +13,16 @@ DATABASE = [];
 
 SECRET = "artemiscool";
 
-var corsOptions = {
-    origin: 'http://localhost:3000',
+// var corsOptions = {
+//     origin: 'http://localhost:5000',
 
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-  }
+//     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+//   }
 app.get('/', (req,res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.json( { message : "Hi pidor"})});
 
-app.post('/draw', cors(corsOptions),(req,res) => {
+app.post('/draw',(req,res) => {
     //delete on prod?
     res.header("Access-Control-Allow-Origin", "*");
 
@@ -33,7 +33,7 @@ app.post('/draw', cors(corsOptions),(req,res) => {
             contents : req.body});
 })
 
-app.get('/drawings',cors(corsOptions),(req,res) => {
+app.get('/drawings',(req,res) => {
     const data = DATABASE;
 
     if(data.length === 0) {
@@ -44,7 +44,7 @@ app.get('/drawings',cors(corsOptions),(req,res) => {
 
     });
 
-app.get('/admin',cors(corsOptions),(req,res) => {
+app.get('/admin',(req,res) => {
     const code = req.query.secret;
 
     if(code == SECRET) {
