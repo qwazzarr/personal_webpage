@@ -10,7 +10,7 @@ const Gallery = () => {
     const [drawings, setdrawings] = useState([]);
     console.log("Gallery rendered, drawings length:"+drawings.length);
     const checkDrawings = async() => {
-        axios.get("http://localhost:5050/drawings")
+        axios.get("http://localhost:5000/drawings")
             .then(response => {
 
                 const data = JSON.parse(response.data.dataDrawings);
