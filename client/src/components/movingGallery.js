@@ -22,17 +22,21 @@ const MovingGallery = ({startW,weight , friction , drawings}) => {
   const props = useSpring({
      loop :true,
      config: {mass:weight,clamp:true,friction:friction,tension:70},
-     to: { 
+     to: 
+        [
+          {
             position:"absolute",
             width : "400px",
             height : "300px",
-            left:"100%"}
-           ,
+            left:"79%",
+            opacity:"0"}
+     ],
      from: { 
         position:"absolute",
         width : "400px",
         height: "300px",
-        left: start+"%"
+        left: start+"%",
+        opacity:"1"
         },
 
     onRest : ()=> {

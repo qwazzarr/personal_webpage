@@ -53,13 +53,13 @@
     
     width: 80%;
     margin-left: 3%;
-    
     gap: 10px;
     font-family: Montserrat;
 }
 
 .projectItemText p {
-    margin: 5px;
+    margin: 5px; 
+    display: inline-block;   
 }
 
 .drawingPage {

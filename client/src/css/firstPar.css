@@ -29,12 +29,30 @@
 #job {
     font-size: 1.5em;
 }
-#faceimage { 
-    width: 30%;
-}
-#faceimage img{
-    width: 70%;
-    height: auto;
+
+@media all and (min-width:0px) and (max-width: 900px) {
+    #faceimage {
+        display: none;
+    }
+    .mainname { 
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin-top: 2%;
+        margin-right: 10%;
+         
+    }
+  }
+
+@media all and (min-width:900px) {
+    #faceimage { 
+        width: 30%;
+    }
+    #faceimage img{
+        width: 70%;
+        height: auto;
+    }
 }
 #frontName {
 
@@ -57,8 +75,10 @@
     font-size: 1.6em;
     flex-direction: column;
     display: flex;
-    align-content: center;
-    
-    margin-left: 10%;
-    width: 80%;
+    align-self: center;
+    width: 70%;
+    margin-left: 15%;
+}
+#description div{
+    margin-bottom: 3%;
 }
