@@ -54,12 +54,21 @@ export default {
                     text : [
                         <p>Worked in <WordInteractive text= "MotionTailor" content="Startup in personalised videos generation field" link = "https://www.motiontailor.com"/> (2022). Was working on writing scripts for automatisation company's API jobs. Used Pandas and Python API libraries.</p>
                     ]
+                },
+
+                guessai : {
+                    photo : "redditLogo3.png",
+
+                    text : [
+                        <p> Created <WordInteractive text="guessAI" content = "Try it yourself!" link = "https://guessai-fa8eb0fa69f1.herokuapp.com/"/> app , where users can guess whether reddit's comment is written using AI or not.</p>,
+                        <p> Used NextJS with websockets and OpenAI API</p>
+                    ]
                 }
                 
             },
             description : [<div>Current <WordInteractive text = "University of Exeter" content = "UK   Russel group university" link = "https://en.wikipedia.org/wiki/University_of_Exeter" />, Computer Science & Math student. 
                         Since 2018 I’ve been creating projects using various technologies. Ready to apply all my skills to your projects!</div>,
-                         <div>Currently looking for one year internships starting 2023 or summer 2023 internships</div>]
+                         <div>Currently looking for summer 2024 internships/Junior positions</div>]
 
             
         }

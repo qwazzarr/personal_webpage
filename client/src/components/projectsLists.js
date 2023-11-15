@@ -12,6 +12,7 @@ const ProjectsList = () => {
         <div>
         <div class = "headline">Projects</div>
         <div class = "projectsList">
+            <ProjectsItem type = "guessai"/>
             <ProjectsItem type = "unipays"/>
             <ProjectsItem type = "messenger"/>
             <ProjectsItem type = "pokemon"/>
