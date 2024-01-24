@@ -60,7 +60,8 @@ export default {
                     photo : "redditLogo3.png",
 
                     text : [
-                        <p> Created <WordInteractive text="guessAI" content = "Try it yourself!" link = "https://guessai-fa8eb0fa69f1.herokuapp.com/"/> app , where users can guess whether reddit's comment is written using AI or not.</p>,
+                        <p> Created <WordInteractive text="guessAI" content = "Try it yourself!" link = "https://guessai-fa8eb0fa69f1.herokuapp.com/"/> app , where users can guess whether reddit's comment is written using AI or not. </p>,
+                        <p> Or chat online and guess whether they are talking to a bot:)</p>,
                         <p> Used NextJS with websockets and OpenAI API</p>
                     ]
                 }

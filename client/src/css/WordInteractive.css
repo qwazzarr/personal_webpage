@@ -100,7 +100,10 @@ div[class^="dot"] {
     height:31.50px;
     margin-top: 25px;
 }
-
+#guessAIY {
+    width: 200px;
+    height: 50px;
+}
 #ReactJsY{
     width: 425.2px;
     height: 37px;

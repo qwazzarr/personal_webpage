@@ -2,7 +2,7 @@ import { useSpring, animated } from 'react-spring'
 
 import { useState } from 'react'
 
-
+import "../css/galleryContainer.css";
 
 
 const MovingGallery = ({startW,weight , friction , drawings}) => {
@@ -45,7 +45,9 @@ const MovingGallery = ({startW,weight , friction , drawings}) => {
         setupdate( update => update +1 );
         },})
   return (
-    <animated.img style={props} src= {item.value.replace(/(\r\n|\n|\r)/gm, "")}></animated.img>
+      <div className="gallery-container">
+        <animated.img style={props} src= {item.value.replace(/(\r\n|\n|\r)/gm, "")}></animated.img>
+      </div>
     )
 }
 

@@ -15,12 +15,12 @@ const Skills = (props) => {
                 </ul>
             </li>
             <li>Docker</li>
-            <li>Css/ <WordInteractive text ="ReactJs" content ="This website uses React too!" link = ''/></li>
+            <li>Css/ <WordInteractive text ="ReactJs" content ="This website uses React too!" link = ''/> / NextJs</li>
 
             <li><WordInteractive text ="NodeJs" content = "It helps to save your drawings ->"/></li>
 
             
-            <li>Basics of Swift UI, Xcode</li>
+            <li>Swift UI, Xcode</li>
             <li>SQL</li>
             <li>Python
                 <ul>
@@ -29,7 +29,10 @@ const Skills = (props) => {
                     <li>Jupyter</li>
                     <li>Deep interest in ML</li>
                 </ul>
-            </li>  
+            </li>
+            <li>CI/CD</li>
+            <li>Jira/Confluence/Bitbucket</li>
+            <li>Agile experience</li>
         </ul>
     </div>;
 

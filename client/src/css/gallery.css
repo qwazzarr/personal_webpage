@@ -6,3 +6,8 @@
     max-width: 100%;
     height: 300px;
 }
+@media screen and (max-width: 768px) {
+    .gallery {
+        display: none;
+    }
+}
