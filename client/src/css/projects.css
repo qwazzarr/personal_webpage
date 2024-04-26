@@ -22,6 +22,14 @@
 
 }
 
+.linkArt {
+    font-size: 5vw;
+    text-align: right;
+    text-decoration: underline;
+    margin-right:5%;
+    margin-top:-2%;
+
+}
 #unipays.png {
     height: 267px;
     width: 265px;
@@ -32,7 +40,6 @@
 .projectItem {
 
 
-    
     font-size: 1.8em;
     display: flex;
     flex-direction: row;
@@ -87,16 +94,6 @@
     display: none;
 }
 
-
-@media all and (min-width:0px) and (max-width: 900px) {
-    .paint {
-        display: none;
-    }
-    .skills {
-        width: 100%;
-        align-self: center;
-    }
-  }
 
 @media all and (min-width:900px) {
     .paint {
@@ -181,16 +178,8 @@
 .galleryPage {
     font-family: Montserrat;
 }
-.linkArt {
-    font-size: 5vw;
-    text-align: right;
-    text-decoration: underline;
-    margin-right:5%;
-    margin-top:-2%;
-
-}
 .links {
-    font-size: 2.1em;
+    font-size: 5vw;
     margin-top: 5%;
     display: flex;
     flex-direction: row;
@@ -213,4 +202,33 @@
     width:100%;
     background-color: #C1DDFF;
     height: 100px;
+}
+
+@media all and (min-width:0px) and (max-width: 900px) {
+    .paint {
+        display: none;
+    }
+    .skills {
+        width: 90%;
+        align-self: center;
+        font-size: 5vw;
+        margin-right: 5%;
+    }
+    .projectItemPhoto {
+        width: 100%;
+    }
+    .projectItemDivPhoto {
+        width: 14%
+    }
+    .projectItem {
+        font-size: 5vw;
+        margin-right: 5%;
+    }
+    .linkArt {
+        display: none;
+    }
+    .links {
+        margin-left: 0%;
+        font-size: 4vw;
+    }
 }

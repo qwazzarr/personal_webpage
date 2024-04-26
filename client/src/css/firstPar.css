@@ -30,40 +30,14 @@
     font-size: 1.5em;
 }
 
-@media all and (min-width:0px) and (max-width: 900px) {
-    #faceimage {
-        display: none;
-    }
-    .mainname { 
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        margin-top: 2%;
-        margin-right: 10%;
-         
-    }
-  }
-
-@media all and (min-width:900px) {
-    #faceimage { 
-        width: 30%;
-    }
-    #faceimage img{
-        width: 70%;
-        height: auto;
-    }
-}
 #frontName {
 
     font-family: Montserrat;
     font-style: normal;
     font-weight: 1000;
     font-size: 6em;
-    
 
     color: #1B1736;
-
 
 }
 
@@ -81,4 +55,49 @@
 }
 #description div{
     margin-bottom: 3%;
+}
+
+
+@media all and (min-width:900px) {
+    #faceimage { 
+        width: 30%;
+    }
+    #faceimage img{
+        width: 70%;
+        height: auto;
+    }
+}
+@media all and (min-width:0px) and (max-width: 900px) {
+    #frontName {
+        font-size: 18vw;
+    }
+    #faceimage {
+        display: none;
+    }
+    .frontPar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    .mainname {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin-top: 2%;
+
+    }
+    #description {
+        margin-top: 25px;
+        margin-bottom: 30px;
+        font-family: Montserrat;
+        font-size: 6vw;
+        flex-direction: column;
+        display: flex;
+        width: 70%;
+        height: 100%;
+        text-align: center;
+    }
+
 }

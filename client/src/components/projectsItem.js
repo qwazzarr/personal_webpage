@@ -16,7 +16,7 @@ const ProjectsItem = (props) => {
     
     return (
         <div class = "projectItem">
-            <div id = {type['photo']}><img src = {require(`../assets/${type['photo']}`)}></img>  </div>
+            <div id = {type['photo']} className="projectItemDivPhoto"><img src = {require(`../assets/${type['photo']}`)} class = "projectItemPhoto"></img>  </div>
             <div class = "projectItemText">{type["text"]}</div>
         </div>
     )

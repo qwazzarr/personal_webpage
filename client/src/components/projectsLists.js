@@ -10,8 +10,9 @@ const ProjectsList = () => {
 
     return (
         <div>
-        <div class = "headline">Projects</div>
+        <div class = "headline">Experience</div>
         <div class = "projectsList">
+            <ProjectsItem type = "citiBank"/>
             <ProjectsItem type = "guessai"/>
             <ProjectsItem type = "unipays"/>
             <ProjectsItem type = "messenger"/>

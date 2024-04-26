@@ -23,7 +23,7 @@ SECRET = "artemiscool";
 //   }
 app.get('/api', (req,res) => {
     res.header("Access-Control-Allow-Origin", "*");
-    res.json( { message : "Hi pidor"})});
+    res.json( { message : "Hi"})});
 
 app.post('/api/draw',(req,res) => {
     //delete on prod?

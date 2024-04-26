@@ -114,6 +114,11 @@ div[class^="dot"] {
     height: 37px;
 }
 
+#equityY {
+    width: 650px;
+    height: 40px;
+}
+
 .interactivediv:hover .stripe1 {
 
     animation: batshit  1.3s cubic-bezier(.94,.32,.24,1.49);
