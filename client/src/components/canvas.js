@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useRef,useEffect,useImperativeHandle,forwardRef,useState} from 'react';
 import { useOnDraw } from './hooks';
@@ -11,8 +10,6 @@ const Canvas = ({color,thickness, width, height},ref) => {
     useImperativeHandle(ref, () => ({
         clear: clear
       }));
-
-    console.log("Getting Rendered:"+width);
     
     // let width = null;
     // let height = null;

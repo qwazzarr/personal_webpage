@@ -70,15 +70,25 @@ export default {
                     photo : "redditLogo3.png",
 
                     text : [
-                        <p> Created <WordInteractive text="guessAI" content = "Try it yourself!" link = "https://guessai-fa8eb0fa69f1.herokuapp.com/"/> app , where users can guess whether reddit's comment is written using AI or not. </p>,
+                        <p> Created <WordInteractive text="guessAI" content = "Try it yourself!" link = "/"/> app , where users can guess whether reddit's comment is written using AI or not. </p>,
                         <p> Chat online and guess whether they are talking to a bot </p>,
                         <p> Used NextJS with websockets and OpenAI API</p>
+                    ]
+                },
+
+                adyo: {
+                    photo : "adyoblue.png",
+
+                    text : [
+                        <p>Worked in <WordInteractive text="Ad-Yo" content="Twitter based interactive company" link = "https:/post2earn.co.uk/"/> (2024). Marketing company for the token</p>,
+                        <p>Interactive game that rewards people mentioning token on twitter/x</p>,
+                        <p>Used TypeScript/Nodejs + 3d party tools</p>
                     ]
                 }
                 
             },
             description : [<div><WordInteractive text = "University of Exeter" content = "UK   Russel group university" link = "https://en.wikipedia.org/wiki/University_of_Exeter" />, Computer Science & Math student.</div>,
-                         <div>Currently looking for summer 2024 internships/Junior positions</div>]
+                         <div>Currently looking for 2025 Graduate/Middle positions/Cool projects to join</div>]
 
             
         }
