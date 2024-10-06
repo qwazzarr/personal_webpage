@@ -116,12 +116,13 @@ div[class^="dot"] {
 
 #equityY {
     width: 650px;
-    height: 40px;
+    height: 50px;
+    left: -200px;
 }
 
 #Ad-YoY {
-    width: 350px;
-    height: 40px;
+    width: 500px;
+    height: 50px;
 }
 
 .interactivediv:hover .stripe1 {

@@ -80,7 +80,7 @@ export default {
                     photo : "adyoblue.png",
 
                     text : [
-                        <p>Worked in <WordInteractive text="Ad-Yo" content="Twitter based interactive company" link = "https:/post2earn.co.uk/"/> (2024). Marketing company for the token</p>,
+                        <p>Built <WordInteractive text="Ad-Yo Post2Earn" content="Twitter based interactive company" link = "https:/post2earn.co.uk/"/> (2024). Marketing company for the token</p>,
                         <p>Interactive game that rewards people mentioning token on twitter/x</p>,
                         <p>Used TypeScript/Nodejs + 3d party tools</p>
                     ]
